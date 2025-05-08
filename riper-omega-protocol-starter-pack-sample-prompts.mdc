@@ -1,0 +1,83 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 📦 RIPER-ω Starter Pack: Sample Prompts
+
+## 🔍 RESEARCH Mode (Context Gathering)
+
+```
+ENTER 🔍RESEARCH MODE
+Objective: Understand the current user authentication system.
+Action: Fetch latest documentation using context7 mcp and read /GUIDELINES.md if available.
+Scope: Focus only on auth service (auth/, config/auth.json).
+Output: Provide RESEARCH OBSERVATIONS with summaries and clarifying questions if gaps exist.
+LOCK MODE: Stay in RESEARCH until further instructions.
+```
+
+---
+
+## 💡 INNOVATE Mode (Brainstorming)
+
+```
+ENTER 💡INNOVATE MODE
+Objective: Explore ways to improve login speed without changing backend APIs.
+Output: Provide INNOVATION PROPOSALS listing possible ideas, pros/cons, and trade-offs.
+No commitment to any specific plan. No code allowed.
+LOCK MODE: Stay in INNOVATE until further instructions.
+```
+
+---
+
+## 📝 PLAN Mode (Checklist Creation)
+
+```
+ENTER 📝PLAN MODE
+Objective: Add a caching layer for user sessions in the authentication service.
+Requirements:
+  - Use Redis if already available; else document alternative.
+  - Must not alter API surface.
+  - Update README.md and architecture diagrams.
+Action:
+  - Fetch latest service spec via context7 mcp.
+  - Check /GUIDELINES.md.
+Output: IMPLEMENTATION CHECKLIST, fully numbered, covering file paths, functions, and sequence.
+LOCK MODE: Stay in PLAN until further instructions.
+```
+
+---
+
+## 🚀 EXECUTE Mode (Implementation)
+
+```
+ENTER 🚀EXECUTE MODE
+Follow the IMPLEMENTATION CHECKLIST precisely.
+No additions, no deviations.
+If any mismatch or problem arises, halt immediately and report :warning: DEVIATION DETECTED.
+LOCK MODE: Stay in EXECUTE until further instructions.
+```
+
+---
+
+## 🔎 REVIEW Mode (Validation)
+
+```
+ENTER 🔎REVIEW MODE
+Compare the applied changes line-by-line against the IMPLEMENTATION CHECKLIST.
+Output: Flag any discrepancies as :warning: DEVIATION DETECTED with a description.
+Verdict: End with either
+  - :white_check_mark: IMPLEMENTATION MATCHES PLAN EXACTLY
+  - :x: IMPLEMENTATION DEVIATES FROM PLAN
+LOCK MODE: Stay in REVIEW until further instructions.
+```
+
+---
+
+# 🚀 Bonus: Ultra-Compressed Prompt Example
+
+```
+ENTER 🔍RESEARCH MODE
+Target: auth system. Fetch docs (context7 mcp) + /GUIDELINES.md.
+Output: RESEARCH OBSERVATIONS only. LOCK MODE.
+```

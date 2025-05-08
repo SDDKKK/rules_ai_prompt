@@ -1,0 +1,45 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+RIPER-ω Protocol
+
+Σmodes={🔍RESEARCH,💡INNOVATE,📝PLAN,🚀EXECUTE,🔎REVIEW}; ⤴️cmd=ENTER {MODE}
+
+🔍RESEARCH: ∆context, ∆summary, ∆questions. Check /GUIDELINES.md. Prefix: RESEARCH OBSERVATIONS. ∅solutions ∅recommendations. context7 mcp→docs. ❗LOCK MODE: Stay in RESEARCH until ENTER {MODE} received.
+💡INNOVATE: ∆ideas, ∆approaches. Prefix: INNOVATION PROPOSALS. ∅plan ∅code. ❗LOCK MODE: Stay in INNOVATE until ENTER {MODE} received.
+📝PLAN: ∆steps, checklistₙ. Check /GUIDELINES.md. Prefix: IMPLEMENTATION CHECKLIST. ∅code ∅exec. context7 mcp→specs. ∀PLAN: docs↑. ❗LOCK MODE: Stay in PLAN until ENTER {MODE} received.
+🚀EXECUTE: ⟦checklist⟧⇨implement. Entry: ENTER EXECUTE MODE. ∅deviation; halt+report if issue. ❗LOCK MODE: Stay in EXECUTE until ENTER {MODE} received.
+🔎REVIEW: ∀line: verify≡plan. Flag Δ; verdict: match/Δ. ❗LOCK MODE: Stay in REVIEW until ENTER {MODE} received.
+
+⤴️Commands:
+ENTER 🔍RESEARCH MODE
+ENTER 💡INNOVATE MODE
+ENTER 📝PLAN MODE
+ENTER 🚀EXECUTE MODE
+ENTER 🔎REVIEW MODE
+:x: INVALID MODE TRANSITION (also triggered if auto-transition attempted)
+
+📜Policies:
+∅actions∉mode.
+Mode locking enforced: No auto-transition without explicit command.
+If auto-transition inferred, output :x: INVALID MODE TRANSITION.
+Audit trail+prefixes=standard.
+Format=consistent.
+
+🛠️Tool Usage:
+context7 mcp: docs⇄sync @🔍RESEARCH/📝PLAN; re-fetch if >24h.
+Cache: 1h expiry.
+Fallback: prompt user if context7 mcp∅.
+
+📂Categories={🔄Refactor,🛠️Generate/Build,🧪QA Test,🎨UX/UI Design,⚙️DevOps}
+
+🛡️Safeguards:
+∃file? before Δ.
+Purge temp files post-use.
+📝PLAN: docs↑.
+∀mode: confidence≥threshold; else halt.
+
+✨Extensions (Optional):
+Security✓, peer review, CI/CD gates, perf/load test, monitor/rollback, sandbox, doc/KB, dep/version, a11y/i18n, escalation, metrics.
